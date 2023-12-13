@@ -7,16 +7,16 @@
 </head>
 <body>
 <div>
-<!--    <input class="ipt"/>
-    <input class="ipt2"/>
-    <button class="btn">新增</button>
-    <button class="btn2">减少</button>
-    <form id="uploadForm">
-        <label for="imageInput">选择图片</label>
-        <input type="file" name="imageFile" id="uploadInput" accept=".jpg,.jpeg,.png">
-        &lt;!&ndash; 设置accept属性只接受.jpg、.jpeg或者.png格式的文件 &ndash;&gt;
-        <button id="submit" type="submit">提交</button>
-    </form>-->
+    <!--    <input class="ipt"/>
+        <input class="ipt2"/>
+        <button class="btn">新增</button>
+        <button class="btn2">减少</button>
+        <form id="uploadForm">
+            <label for="imageInput">选择图片</label>
+            <input type="file" name="imageFile" id="uploadInput" accept=".jpg,.jpeg,.png">
+            &lt;!&ndash; 设置accept属性只接受.jpg、.jpeg或者.png格式的文件 &ndash;&gt;
+            <button id="submit" type="submit">提交</button>
+        </form>-->
 
 </div>
 </div>
@@ -62,33 +62,38 @@
         },
         {
             id: 3,
-            img: "https://img01.yzcdn.cn/vant/cat.jpeg",
-            prize_name: "乐豆30",
+            img: "https://pic.ziyuan.wang/user/psh/2023/12/hanliao_7c1e0c2f93086.jpg",
+            prize_name: "韩料",
         },
         {
             id: 4,
-            img: "https://img01.yzcdn.cn/vant/cat.jpeg",
-            prize_name: "乐豆40",
+            img: "https://pic.ziyuan.wang/user/psh/2023/12/zhongcan_c62a61c851768.jpg",
+            prize_name: "中餐",
         },
         {
             id: 5,
-            img: "https://img01.yzcdn.cn/vant/cat.jpeg",
-            prize_name: "乐豆50",
+            img: "https://pic.ziyuan.wang/user/psh/2023/12/ganguo_c5eb77c6f8c11.png",
+            prize_name: "干锅",
         },
         {
             id: 6,
-            img: "https://img01.yzcdn.cn/vant/cat.jpeg",
-            prize_name: "乐豆60",
+            img: "https://pic.ziyuan.wang/user/psh/2023/12/kaorou_8f18c0826e5ae.webp",
+            prize_name: "烤肉",
         },
         {
             id: 7,
-            img: "https://img01.yzcdn.cn/vant/cat.jpeg",
-            prize_name: "乐豆70",
+            img: "https://pic.ziyuan.wang/user/psh/2023/12/meiwa_8060e5f52a7f3.webp",
+            prize_name: "美蛙",
         },
         {
             id: 8,
-            img: "https://img01.yzcdn.cn/vant/cat.jpeg",
-            prize_name: "乐豆80",
+            img: "https://pic.ziyuan.wang/user/psh/2023/12/xiaochi_cb70174d53995.webp",
+            prize_name: "小吃",
+        },
+        {
+            id: 8,
+            img: "https://pic.ziyuan.wang/user/psh/2023/12/shaokao_777f53db2a700.jpg",
+            prize_name: "烧烤",
         },
     ];
     let idx = 1;
@@ -139,36 +144,36 @@
         }
     });*/
 
-/*    btn2.addEventListener("click", () => {
-        if (ipt.value) {
-            iptvalue1 = ipt.value;
-        }
-        if (ipt2.value != "" || ipt2.value) {
-            iptvalue2 = ipt2.value;
-        }
-        idx--;
-        data.unshift();
-        prizeList = formatPrizeList(data);
-        prizeAddHtml(prizeList);
-    });
-    btn.addEventListener("click", () => {
-        if (ipt.value) {
-            iptvalue1 = ipt.value;
-        }
-        if (ipt2.value != "" || ipt2.value) {
-            iptvalue2 = ipt2.value;
-        }
-        idx++;
-        let obj = {
-            id: idx,
-            img: iptvalue2,
-            prize_name: iptvalue1,
-        };
-        data.push(obj);
-        prizeList = formatPrizeList(data);
-        prizeAddHtml(prizeList);
-        console.log(data);
-    });*/
+    /*    btn2.addEventListener("click", () => {
+            if (ipt.value) {
+                iptvalue1 = ipt.value;
+            }
+            if (ipt2.value != "" || ipt2.value) {
+                iptvalue2 = ipt2.value;
+            }
+            idx--;
+            data.unshift();
+            prizeList = formatPrizeList(data);
+            prizeAddHtml(prizeList);
+        });
+        btn.addEventListener("click", () => {
+            if (ipt.value) {
+                iptvalue1 = ipt.value;
+            }
+            if (ipt2.value != "" || ipt2.value) {
+                iptvalue2 = ipt2.value;
+            }
+            idx++;
+            let obj = {
+                id: idx,
+                img: iptvalue2,
+                prize_name: iptvalue1,
+            };
+            data.push(obj);
+            prizeList = formatPrizeList(data);
+            prizeAddHtml(prizeList);
+            console.log(data);
+        });*/
 
     //每个奖增加style
     function formatPrizeList(list) {
@@ -220,7 +225,7 @@
             ${prizeList[i].prize_name}
           </div>
           <div style="padding-top:5px;">
-            <img src=" ${prizeList[i].img}" style="width:85%"/>
+            <img src=" ${prizeList[i].img}" style="width:85%" height=70px/>
 <!--            <img src="huoguo.webp" height="427" width="640"/>-->
           </div>
         </div>`;
@@ -267,10 +272,10 @@
         setTimeout(() => {
             isRotating = false;
             console.log("旋转结束");
-            alert("吃"+data[gift_id-1].prize_name)
+            alert("今天吃" + data[gift_id - 1].prize_name + "!!!")
         }, config.duration + 500);
     }
-    </script>
+</script>
 <style>
     .luckBg {
         background: #ffcf49;
@@ -278,8 +283,19 @@
         height: 35rem;
         border-radius: 50%;
         margin: 10% auto;
+        opacity: 0.85;
         padding: 5px;
     }
+
+    body {
+        background: url("https://pic.ziyuan.wang/2023/12/07/guest_d408bdc25795c.jpg") no-repeat center center fixed;
+        /*兼容浏览器版本*/
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    /*背景图*/
 
     .luckWhellBg,
     .luckWhellBgMain {
